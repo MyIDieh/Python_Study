@@ -1,0 +1,34 @@
+import os
+
+def processar_resposta(resposta, name):
+    if resposta == "1":
+        print(f"{os.linesep}{name} today is a beautiful day. {os.linesep}")
+    elif resposta == "2":
+        print(f"{os.linesep}{name} don't forget to drink water. {os.linesep}")
+    elif resposta == "3":
+        print(f"{os.linesep}{name} every day need to be lived. Our time is matter. {os.linesep}")
+    elif resposta == "4":
+        print(f"{os.linesep}{name} have a nice day. {os.linesep}")
+    else:
+        print("Type just 1, 2, 3 or 4")
+        
+def start():
+    #apresentation of chatbot
+    print("Hello, Welcome to the Piece Channel")
+    
+    #ask the name
+    name = input("type your name: ")
+    
+    #ask the email
+    email = input("type your email: ")
+    
+    while True:
+            #give the menu options
+            resposta = input(f"What do you want to know today? {os.linesep}[1] - Question 1? {os.linesep}[2] - Question 2? {os.linesep}[3] - Question 3? {os.linesep}[4] - Question 4? {os.linesep}")
+    
+            #process the answers
+            processar_resposta(resposta, name)
+
+
+if __name__=="__main__":
+    start()
